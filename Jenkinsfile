@@ -1,6 +1,8 @@
 @Library('shared-repo') _
 
 pipeline {
+    agent any
+
     stages {
         stage('Test') {
             script {
