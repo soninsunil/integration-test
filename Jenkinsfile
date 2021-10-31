@@ -1,14 +1,14 @@
 @Library('shared-repo') _
 
-pipeline{
-    stages{
-        stage('Test'){
-            script{
+pipeline {
+    stages {
+        stage('Test') {
+            script {
                 echo "Test Stage"
             }
         }
-        stage('SharedCode'){
-            script{
+        stage('SharedCode') {
+            script {
                 integrationTest.run()
             }
         }
