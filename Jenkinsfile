@@ -4,14 +4,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
-            script {
-                echo "Test Stage"
+        stage('Build') {
+            steps {
+                echo 'Building..'
             }
         }
-        stage('SharedCode') {
-            script {
-                integrationTest.run()
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+                script {
+                    integrationTest.run()
+            }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
