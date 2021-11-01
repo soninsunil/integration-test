@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 script {
-                    integrationTest.run()
+                    integrationTest.run('integration-test-repo')
             }
             }
         }
